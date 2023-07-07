@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
-import { NewsResponse, Article, ArticlesByCategoryAndPAge } from '../interfaces';
+import { NewsResponse, Article, ArticlesByCategoryAndPage } from '../interfaces';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -16,7 +16,7 @@ const apiUrl = environment.apiUrl;
 })
 export class NewsService {
 
-  private articlesByCategoryAndPage: ArticlesByCategoryAndPAge = {};
+  private articlesByCategoryAndPage: ArticlesByCategoryAndPage = {};
 
 
   constructor( private http: HttpClient ) { }

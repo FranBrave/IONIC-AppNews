@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" mode="ios" class="ion-no-border">
   <ion-toolbar>
     <ion-title>
-      Headers
+      Categories
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense" mode="ios" class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">Headers</ion-title>
+      <ion-title size="large">Categories</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -34,12 +34,12 @@
   ></app-articles>
 
   
- <ion-infinite-scroll
+  <ion-infinite-scroll
       threshold="25%"
       position="bottom"
       (ionInfinite)="loadData()"
     >
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading...">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 

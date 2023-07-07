@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Article } from 'src/app/interfaces';
+import { Article } from '../../interfaces';
 
 @Component({
   selector: 'app-articles',
@@ -11,6 +11,5 @@ export class ArticlesComponent {
   @Input() articles: Article[] = [];
 
   constructor() { }
-
 
 }

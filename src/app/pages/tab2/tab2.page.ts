@@ -11,7 +11,7 @@ import { Article } from '../../interfaces';
 })
 export class Tab2Page implements OnInit {
 
-  @ViewChild( IonInfiniteScroll, { static: true }) infiniteScroll!: IonInfiniteScroll;
+  @ViewChild( IonInfiniteScroll, { static: true }) infiniteScroll: IonInfiniteScroll;
 
   public categories: string[] = ['business','entertainment','general','health','science','sports','technology'];
   public selectedCategory: string = this.categories[0];
@@ -36,7 +36,7 @@ export class Tab2Page implements OnInit {
     })
   }
 
-loadData() {
+  loadData() {
     this.newsService.getTopHeadlinesByCategory( this.selectedCategory, true )
       .subscribe( articles => {
         
@@ -50,6 +50,10 @@ loadData() {
           this.articles = articles;
           this.infiniteScroll.complete();
           // event.target.complete();    
+         
+
         })
+
       }
+
 }
